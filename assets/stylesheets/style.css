@@ -1,0 +1,69 @@
+:root {
+  --mainColor: rgb(12, 12, 16);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+
+  /* affects everything */
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+#logo {
+  height: 45px;
+  border-radius: 100px;
+}
+
+#container {
+  width: 80%;
+  margin: auto auto;
+}
+
+.navItem {
+  color: white;
+  background-color: rgb(146, 146, 196);
+  padding: 8px;
+  border-radius: 20px;
+  font-size: 24px;
+}
+h1,
+h2,
+h3 {
+  margin: 5vh 0;
+}
+
+#splash {
+  height: 100vh;
+  width: 100vw;
+  color: rgb(82, 156, 156);
+
+  background-color: #232e8d;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+  background: url("/assets/waves/wave1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#splashbutton {
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: rgb(65, 62, 58);
+}
+/* very cool commenting ctr/ */
