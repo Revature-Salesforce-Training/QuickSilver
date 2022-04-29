@@ -18,6 +18,24 @@ function component()
 	return element;
 }
 
+async function getTitle(query)
+{
+	const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=1&srsearch=${query}`;
+	const response = await fetch(url);
+	if (!response.ok)
+	{
+		throw Error(response.statusText);
+	}
+	const json = await response.json();
+	return json;
+}
+
+function getJoke(category) {
+	fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=1&srsearch=${category}`)
+	.then(r => r.json())
+	.then(res => console.log(res.query.search[0].title));
+  }
+
 async function getSents()
 {
 	let doc = await wtf.fetch('War')
@@ -30,5 +48,11 @@ async function getSents()
 	//console.log(coach.text()) //'Nick Nurse'
 }
 
-getSents();
+//let a;
+//getTitle('War').then(function(value) {a = value;}).catch(function(error) {throw error.statusText;})
+//console.log(a);
+
+getJoke('graa');
+
+//getSents();
 document.body.appendChild(component());
