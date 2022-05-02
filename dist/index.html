@@ -3,22 +3,36 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Cow</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<script src="main.js"></script>
-		<a href="https://upload.wikimedia.org/wikipedia/en/9/9a/Cow_Tools_cartoon.png">Cow tools</a>
-		<img src="head.png" width="64" height="64">
-		<h1>Ask the Cow!</h1>
+		<div class="right">
+			<a href="https://upload.wikimedia.org/wikipedia/en/9/9a/Cow_Tools_cartoon.png">Cow tools</a>
+		</div>
+		
+		<div class="container">
+			<img src="head.png" width="150" height="150">
+			<h1>Ask the Cow!</h1>
+		</div>
+		
 		<h2>It knows about a lot of things.</h2>
 		<h3>Name any subject, and hear what the Cow has to say:</h3>
-		<form action="/url" method="GET">
-			<input type="text", placeholder="Subject", name="textinput">
-		</form>
-		<button class="button style", type="button"> JUST ASK </button>
-		<figure class="textover">
-			<img src="cow.png" alt="The Cow" width="512" height="512">
-			<figcaption>the cow text</figcaption>
-		</figure>
+		<div class="container">
+			<form action="/url" method="GET">
+				<input type="text", placeholder="Subject", name="textinput">
+			</form>
+			<button class="buttonstyle", type="button"> JUST ASK </button>
+		</div>
+		
+		<div class="container">
+			<figure class="textover">
+				<img src="cow.png" alt="The Cow" width="512" height="512">
+				<div class="cowtext">Centered</div>
+			</figure>
+		</div>
+		
 		
 	</body>
 </html>

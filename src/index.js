@@ -6,18 +6,6 @@ import wtf from 'wtf_wikipedia'
 // go to dist folder
 // start server
 
-function component()
-{
-	const element = document.createElement('div');
-
-	// Lodash, currently included via a script, is required for this line to work
-	element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-
-
-	return element;
-}
-
 function getTitle(entry)
 {
 	fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=1&srsearch=${entry}`)
@@ -44,4 +32,3 @@ async function getSents()
 getTitle('graa');
 
 //getSents();
-document.body.appendChild(component());
