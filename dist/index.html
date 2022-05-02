@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<script src="main.js"></script>
+		
 		<div class="right">
 			<a href="https://upload.wikimedia.org/wikipedia/en/9/9a/Cow_Tools_cartoon.png">Cow tools</a>
 		</div>
@@ -21,18 +21,18 @@
 		<h3>Name any subject, and hear what the Cow has to say:</h3>
 		<div class="container">
 			<form action="/url" method="GET">
-				<input type="text", placeholder="Subject", name="textinput">
+				<input type="text", placeholder="Subject", name="textinput", id="textinput">
 			</form>
-			<button class="buttonstyle", type="button"> JUST ASK </button>
+			<button class="buttonstyle", type="button", id="btn1"> JUST ASK </button>
 		</div>
 		
 		<div class="container">
 			<figure class="textover">
 				<img src="cow.png" alt="The Cow" width="512" height="512">
-				<div class="cowtext">Centered</div>
+				<div class="cowtext", id="cowtext">Centered</div>
 			</figure>
 		</div>
 		
-		
+		<script src="main.js"></script>
 	</body>
 </html>

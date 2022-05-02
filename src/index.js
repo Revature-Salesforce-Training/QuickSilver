@@ -6,6 +6,15 @@ import wtf from 'wtf_wikipedia'
 // go to dist folder
 // start server
 
+let cowtext = document.getElementById('cowtext');
+document.addEventListener('click', (e) => {
+    let element = e.target;
+    if(element.tagName == "BUTTON"){
+		var newtext = document.getElementById("textinput").value;     
+        cowtext.textContent = newtext;
+    }
+});
+
 function getTitle(entry)
 {
 	fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=1&srsearch=${entry}`)
