@@ -13,7 +13,10 @@ document.addEventListener('click', async function(e) {
 		// TO SET TEXT: cowtext.textContent =
 		let entry = document.getElementById("textinput").value;
 		let title = await getTitle(entry);
-		cowtext.textContent = title;
+		let sents = await getSents(title);
+		const sent = sents[Math.floor(Math.random() * sents.length)];
+		// Max: 612
+		cowtext.textContent = sent.substring(0, 612);
     }
 });
 
@@ -25,15 +28,16 @@ async function getTitle(entry)
 	return parsedFetchRes.query.search[0].title;
 }
 
-async function getSents()
+async function getSents(entry)
 {
-	let doc = await wtf.fetch('War')
+	let doc = await wtf.fetch(entry)
 	const sents = new Array();
 	for (let i = 0; i < doc.sentences().length; i++)
 	{
-		console.log(doc.sentences()[i].text());
+		//console.log(doc.sentences()[i].text());
 		sents.push(doc.sentences()[i].text())
 	}
+	return sents
 	//console.log(coach.text()) //'Nick Nurse'
 }
 
