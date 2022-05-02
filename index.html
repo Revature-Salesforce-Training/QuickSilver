@@ -1,0 +1,47 @@
+<!--
+    Author: Nate Kappler
+    Last Edited: 5/1/22
+    Description: A sinple html page that queries an external star wars API to find a chacter and list their attributes
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Star Wars Character Searcher</title>
+        <meta name ="description" content="X-Content-Type-Options=nosniff">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <script src="assets/index.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="title">Star Wars Character Searcher</h1>
+            <div>
+                <h2>Find Character :</h2>
+                <input type="text" id="input">
+                <button id="inputButt">Search</button>
+            </div>
+        </header>
+        <div id="infodiv">
+             <ul id="charInfo">
+             </ul> 
+        </div>
+        <div id="moreInfo">
+            <ul id="filmInfo">
+            </ul>
+            <ul id="shipInfo">
+            </ul>
+            <ul id="vehicleInfo">
+            </ul>
+        </div>
+        <!-- <div id="starships"> 
+            <ul id="shipInfo">
+            </ul>
+        </div>
+        <div id="vehicle">
+            <ul id="vehicleInfo">
+            </ul>
+        </div> -->
+    </body>
+</html>
