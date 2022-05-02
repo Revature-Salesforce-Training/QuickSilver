@@ -7,19 +7,22 @@ import wtf from 'wtf_wikipedia'
 // start server
 
 let cowtext = document.getElementById('cowtext');
-document.addEventListener('click', (e) => {
+document.addEventListener('click', async function(e) {
     let element = e.target;
     if(element.tagName == "BUTTON"){
-		var newtext = document.getElementById("textinput").value;     
-        cowtext.textContent = newtext;
+		// TO SET TEXT: cowtext.textContent =
+		let entry = document.getElementById("textinput").value;
+		let title = await getTitle(entry);
+		cowtext.textContent = title;
     }
 });
 
-function getTitle(entry)
+async function getTitle(entry)
 {
-	fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=1&srsearch=${entry}`)
-	.then(r => r.json())
-	.then(res => console.log(res.query.search[0].title));
+	let fetchRes = await fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=1&srsearch=${entry}`);
+	let parsedFetchRes = await fetchRes.json();
+	console.log(parsedFetchRes.query.search[0].title);
+	return parsedFetchRes.query.search[0].title;
 }
 
 async function getSents()
@@ -38,6 +41,6 @@ async function getSents()
 //getTitle('War').then(function(value) {a = value;}).catch(function(error) {throw error.statusText;})
 //console.log(a);
 
-getTitle('graa');
+//getTitle('graa');
 
 //getSents();
