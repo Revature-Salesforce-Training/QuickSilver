@@ -1,29 +1,33 @@
+/*
+    Author: Alex Griggs
+    last updated: 5/2/22
+    description: CSS for an interactive webpage that displays text from wikipedia
+*/
+
 body {background-color: #7c7d7d;}
 
 h1 { color: whitesmoke; font-family: Helvetica, sans-serif; font-size: 80px;}
 h2 { color: whitesmoke; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 40px;}
 h3 { color: whitesmoke; text-align: center; font-family: Arial, Helvetica, sans-serif;font-size: 25px;}
 a { color: whitesmoke; }
+.cowText { color: whitesmoke }
+
 form {margin-right: 1%;}
 
 textover {justify-content: center;}
 
-div.right {
-    text-align: right;
-  } 
+div.right { text-align: right; } 
 
+.container
+{
+  display: flex;
+  justify-content: center;
+}
 
-
-  .container {
-    display: flex;
-    justify-content: center;
-  }
-
-
-  .cowtext {
-    position: relative;
-    top: -50%;
-    left: 12%;
-    max-width: 250px;
-
-  }
+.cowText
+{
+  position: relative;
+  top: -50%;
+  left: 12%;
+  max-width: 250px;
+}
