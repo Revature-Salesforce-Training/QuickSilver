@@ -2,13 +2,16 @@ document.querySelector('#btn').addEventListener("click", getInfo);
 
 async function getInfo() {
    let pokemon = document.querySelector('#textInput').value;
-   let res = await fetch('https://pokeapi.co/api/v2/pokemon/${pokemon}');
+   //
+   let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
    let parsedRes = await res.json();
    let myDiv = document.querySelector('#myDiv');
    myDiv.innerHTML = "";
+   //clear
    let pokemonAbilities = parsedRes.abilities;
    for(let i = 0; i < pokemonAbilities.length; i++) {
        let pElem = document.createElement('p');
+       console.log(pokemonAbilities[i].ability.name);
        pElem.innerText = pokemonAbilities[i].ability.name;
        myDiv.appendChild(pElem)
    }
