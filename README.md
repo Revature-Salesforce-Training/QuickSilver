@@ -3,7 +3,7 @@
 
 - 🔭 This project is called [Media+]) 
 
-- 🌱 It utilizes **HTML,React ,CSS, and Gatsby** to render an amazing website for streaming content.
+- 🌱 It utilizes **HTML,React, and CSS** to render an amazing website for streaming content.
 
 <img width="742" alt="Screen Shot 2022-05-02 at 10 39 19 PM" src="https://user-images.githubusercontent.com/74889517/166397029-ce781df0-0b30-4324-b236-862c3bb57291.png">
 
