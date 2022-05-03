@@ -1,5 +1,5 @@
 <h1 align="left">Hi 👋, I'm Zablon Charles</h1>
-<h3 align="left">A passionate frontend developer at Revature</h3>
+<h3 align="left">A passionate software developer at Revature</h3>
 
 - 🔭 This project is called [Media+]) 
 
