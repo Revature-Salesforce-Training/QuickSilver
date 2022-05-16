@@ -7,7 +7,7 @@ async function getInfo() {
    let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
    //translate to json
    let parsedRes = await res.json();
-   
+     //let the selector refer to the id, myDIV
    let myDiv = document.querySelector('#myDiv');
    //clearing the Div to an empty string.
    myDiv.innerHTML = "";
